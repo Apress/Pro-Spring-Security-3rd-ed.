@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Spring Security 6 authentication example!</title>
+</head>
+<body>
+
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+
+<h2>Welcome to Spring Security 6 authentication example!</h2>
+
+<p>Click <a th:href="@{/authenticated}">here</a> to get authenticated!</p>
+
+</body>
+</html>
+
+You have successfully logged in Using Spring Security 6 LDAP Authentication!

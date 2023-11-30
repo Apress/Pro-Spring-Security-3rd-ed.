@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <title>Spring Security 6 authentication example</title>
+</head>
+<body>
+<h2>Welcome to Spring Security 6 authentication example!</h2>
+<h2 th:inline="text">You are an authenticated user: <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h2>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout"/>
+</form>
+
+</body>
+</html>
